@@ -1,0 +1,268 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{02E0D8A5-C56B-4B33-9EEF-5D6015755964}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>Vue</RootNamespace>
+    <AssemblyName>Vue</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="AjoutAvisWindows.xaml.cs">
+      <DependentUpon>AjoutAvisWindows.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PopUpUC.xaml.cs">
+      <DependentUpon>PopUpUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="RightUC.xaml.cs">
+      <DependentUpon>RightUC.xaml</DependentUpon>
+    </Compile>
+    <Page Include="AjoutAvisWindows.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PopUpUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LeftUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="MainWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="LeftUC.xaml.cs">
+      <DependentUpon>LeftUC.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="MainWindow.xaml.cs">
+      <DependentUpon>MainWindow.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Page Include="RightUC.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <None Include="Images\desktop.ini" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\absinthe-calavera-noir.png" />
+    <Resource Include="Images\appeleznous.PNG" />
+    <Resource Include="Images\avis_avatar.jpeg" />
+    <Resource Include="Images\ButtonMenu.png" />
+    <Resource Include="Images\Captain Morgan.png" />
+    <Resource Include="Images\Chateau-Boutinet.jpg" />
+    <Resource Include="Images\Chateau-Boutinet.png" />
+    <Resource Include="Images\Chateau-Brane-Cantenac.png" />
+    <Resource Include="Images\gordons_gin.png" />
+    <Resource Include="Images\Heineken-bottles.jpg" />
+    <Resource Include="Images\jack-daniels-old-no-7.jpg" />
+    <Resource Include="Images\jaegermeister.png" />
+    <Resource Include="Images\Kronenbourg.png" />
+    <Resource Include="Images\Label 5 CB.jpg" />
+    <Resource Include="Images\Label 5 PB.jpg" />
+    <Resource Include="Images\MANZANA-VERDE.png" />
+    <Resource Include="Images\mojito.jpg" />
+    <Resource Include="Images\Remi-Martin-XO.png" />
+    <Resource Include="Images\Remy-Martin-Cognac.png" />
+    <Resource Include="Images\Ricard.png" />
+    <Resource Include="Images\Tequila-tiscaz.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Metier\Metier.csproj">
+      <Project>{e8c3e5ac-36dd-4101-a78a-eba934097a8f}</Project>
+      <Name>Metier</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Persistance\Persistance.csproj">
+      <Project>{21922c28-304e-4743-8f62-a7d95d815b93}</Project>
+      <Name>Persistance</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\104-16465-v4_product.png" />
+    <Resource Include="Images\aberlour-15ans-select-cask-reserve.jpg" />
+    <Resource Include="Images\abnormal.jpg" />
+    <Resource Include="Images\absinthe-apocalypse.jpg" />
+    <Resource Include="Images\absinthe-combier.jpg" />
+    <Resource Include="Images\absinthe-green-velvet-verte.jpg" />
+    <Resource Include="Images\absinthe-jade-nouvelle-orleans.jpg" />
+    <Resource Include="Images\absinthe-la-clandestine.jpg" />
+    <Resource Include="Images\absinthe-la-maison-fontaine-verte.jpg" />
+    <Resource Include="Images\absinthe-la-ptite-douce.jpg" />
+    <Resource Include="Images\absinthe-roquett.jpg" />
+    <Resource Include="Images\absolut-1-litre.jpg" />
+    <Resource Include="Images\abuelo-12-ans-gran-reserva.jpg" />
+    <Resource Include="Images\angostura-1919.jpg" />
+    <Resource Include="Images\angostura-cask-collection-n-1-16-ans.jpg" />
+    <Resource Include="Images\appleton-blanc.jpg" />
+    <Resource Include="Images\appleton-extra-12-ans.jpg" />
+    <Resource Include="Images\bacardi-black.jpg" />
+    <Resource Include="Images\bacardi-gold.jpg" />
+    <Resource Include="Images\bally-12-ans.jpg" />
+    <Resource Include="Images\barbancourt-3-etoiles-4-ans.jpg" />
+    <Resource Include="Images\barcelo-imperial.jpg" />
+    <Resource Include="Images\baron-otard-xo-gold.jpg" />
+    <Resource Include="Images\beluga-classic.jpg" />
+    <Resource Include="Images\belvedere.jpg" />
+    <Resource Include="Images\bierePapa.png" />
+    <Resource Include="Images\blanton-s-special-reserve.jpg" />
+    <Resource Include="Images\blue-hour-anejo.jpg" />
+    <Resource Include="Images\blue-hour-blanco.jpg" />
+    <Resource Include="Images\blue-hour-reposado.jpg" />
+    <Resource Include="Images\bombay-sapphire.jpg" />
+    <Resource Include="Images\bong-spirit-1-litre.jpg" />
+    <Resource Include="Images\botanic-ultra-premium.jpg" />
+    <Resource Include="Images\botran-12-ans-anejo-sistema-solera.jpg" />
+    <Resource Include="Images\broker-s-40cl.jpg" />
+    <Resource Include="Images\bruichladdich-bere-barley-2008.jpg" />
+    <Resource Include="Images\buffalo-trace.jpg" />
+    <Resource Include="Images\bulldog.jpg" />
+    <Resource Include="Images\bushmills-honey.jpg" />
+    <Resource Include="Images\captain-morgan-black-spiced.jpg" />
+    <Resource Include="Images\cardhu-15-ans.jpg" />
+    <Resource Include="Images\chartreuse-verte.jpg" />
+    <Resource Include="Images\chimay-bleue.png" />
+    <Resource Include="Images\chivas-regal-12-ans.jpg" />
+    <Resource Include="Images\chouffe.png" />
+    <Resource Include="Images\ciroc-snap-frost.jpg" />
+    <Resource Include="Images\citadelle.jpg" />
+    <Resource Include="Images\connemara-irish-whiskey.jpg" />
+    <Resource Include="Images\cragganmore-12-ans.jpg" />
+    <Resource Include="Images\crystal-head-aurora.jpg" />
+    <Resource Include="Images\crystal-head.jpg" />
+    <Resource Include="Images\dalwhinnie-15-ans.jpg" />
+    <Resource Include="Images\dictador-claro-100-months-aged.jpg" />
+    <Resource Include="Images\diplome.jpg" />
+    <Resource Include="Images\el-dorado-21-ans-special-reserve.jpg" />
+    <Resource Include="Images\fifty-pounds.jpg" />
+    <Resource Include="Images\filliers-28-dry.jpg" />
+    <Resource Include="Images\finlaggan-old-reserve.jpg" />
+    <Resource Include="Images\flor-de-cana-grande-reserve-7-ans.jpg" />
+    <Resource Include="Images\g-vine-floraison.jpg" />
+    <Resource Include="Images\gold-9999.jpg" />
+    <Resource Include="Images\grey-goose-cherry-noir-1-litre.jpg" />
+    <Resource Include="Images\gulden.png" />
+    <Resource Include="Images\hendrick-s.jpg" />
+    <Resource Include="Images\hennessy-black.jpg" />
+    <Resource Include="Images\hennessy-paradis-extra.jpg" />
+    <Resource Include="Images\hennessy-vs-collector-s-edition.jpg" />
+    <Resource Include="Images\hpnotiq.jpg" />
+    <Resource Include="Images\ish-london-dry-gin.jpg" />
+    <Resource Include="Images\ivan-the-terrible.jpg" />
+    <Resource Include="Images\malecon-12-ans.jpg" />
+    <Resource Include="Images\mandarine-napoleon.jpg" />
+    <Resource Include="Images\matusalem-gran-reserva-15-ans.jpg" />
+    <Resource Include="Images\motorhead-premium.jpg" />
+    <Resource Include="Images\mozart-gold.jpg" />
+    <Resource Include="Images\mt-blanc.png" />
+    <Resource Include="Images\pampero-anejo-seleccion-1938.jpg" />
+    <Resource Include="Images\presidente-marti-15-ans.jpg" />
+    <Resource Include="Images\remy-martin-vsop.jpg" />
+    <Resource Include="Images\rince_cochon.png" />
+    <Resource Include="Images\safari-liqueur.jpg" />
+    <Resource Include="Images\silent-pool.jpg" />
+    <Resource Include="Images\tatratea-peach-tea-liqueur-42.jpg" />
+    <Resource Include="Images\the-botanist-islay-dry-gin.jpg" />
+    <Resource Include="Images\the-king-of-soho.jpg" />
+    <Resource Include="Images\trappiste.png" />
+    <Resource Include="Images\unicum-zwack.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\rating.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Images\aqualanca.png" />
+    <Resource Include="Images\chateau-clinet-2010.png" />
+    <Resource Include="Images\chateau-haut-brion-2009-1er-cru-classe.png" />
+    <Resource Include="Images\chateau-le-gay-2008.png" />
+    <Resource Include="Images\chateau-margaux-2010-1er-cru-classe.png" />
+    <Resource Include="Images\chateau-palmer-2006-3eme-cru-classe.png" />
+    <Resource Include="Images\chateau-yquem-2005-1er-cru-classe-superieur.png" />
+    <Resource Include="Images\clos-d-ora-2015-gerard-bertrand.png" />
+    <Resource Include="Images\corton-charlemagne-grand-cru-2015-louis-latour.png" />
+    <Resource Include="Images\le-pastis-de-savoie.jpg" />
+    <Resource Include="Images\m1924.jpg" />
+    <Resource Include="Images\pastis-fraicheur.png" />
+    <Resource Include="Images\pastis-prado.jpg" />
+    <Resource Include="Images\pastis_51_ml.jpg" />
+    <Resource Include="Images\pbjanot.jpg" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>

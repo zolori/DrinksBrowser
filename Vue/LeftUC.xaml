@@ -1,0 +1,32 @@
+﻿<UserControl x:Class="Vue.LeftUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vue"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <!--<Border CornerRadius="100" BorderThickness="5" BorderBrush="Red">-->
+    <Grid HorizontalAlignment="Left" Width="240" Margin="0,10,10,0">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto"/>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+
+        <TextBlock Style="{StaticResource Style_TxtBlock}" Text="Filtrer Par type" FontSize="14" Padding="10" Background="Black" Foreground="White"/>
+        <ListView ItemsSource="{Binding TypesAlcool}" BorderThickness="0,0,2,0" Grid.Row="1">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <WrapPanel>
+                        <CheckBox Style="{StaticResource Style_CheckBox}" Content="{Binding}" HorizontalAlignment="Center" 
+                                      VerticalAlignment="Center" Margin="5" Checked="CheckBox_Changed" Unchecked="CheckBox_Changed"/>
+                    </WrapPanel>
+                    <!--<TextBlock Style="{StaticResource Style_TxtBlock}" Text="{Binding}"></TextBlock>-->
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </Grid>
+    <!--</Border>-->
+
+</UserControl>

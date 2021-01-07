@@ -1,0 +1,46 @@
+﻿<UserControl x:Class="Vue.RightUC"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Vue"
+             xmlns:my="clr-namespace:Metier;assembly=Metier"
+             xmlns:system="clr-namespace:System;assembly=mscorlib"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+
+    <Grid>
+        <ListView x:Name="lvAlcool"  ScrollViewer.HorizontalScrollBarVisibility="Disabled" BorderThickness="0" Margin="50,50,0,20"
+                  ItemsSource="{Binding AlcoolsAffiche}" SelectedValue="{Binding AlcoolSelectionne, Mode=TwoWay}">
+
+            <!--Met tout en ligne-->
+            <ListView.ItemsPanel>
+                <ItemsPanelTemplate>
+                    <WrapPanel/>
+                </ItemsPanelTemplate>
+            </ListView.ItemsPanel>
+
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <StackPanel Width="200" Height="260" MouseUp="StackPanel_MouseUp" Margin="5">
+                        <Image Source="{Binding Path=Image}" VerticalAlignment="Top" HorizontalAlignment="Stretch"
+                               Stretch="Fill" Width="200" Height="210"/>
+                        <TextBlock Text="{Binding Path=Nom}" HorizontalAlignment="Center" FontWeight="Bold"></TextBlock>
+                        <WrapPanel  HorizontalAlignment="Center" ToolTip="Note de l'alcool">
+                            <TextBlock Text="{Binding Path=Note, StringFormat='\{0\}/5'}"
+                                   Foreground="#FFC7A01C" FontWeight="Bold"></TextBlock>
+                            <TextBlock Text="*" Foreground="#FFC7A01C" FontWeight="Normal"></TextBlock>
+                        </WrapPanel>
+                        <TextBlock Text="{Binding Path=Prix, StringFormat='\{0\} €'}" HorizontalAlignment="Center"
+                                   Foreground="#FF9E0C0C" ToolTip="Prix de l'alcool" FontWeight="Bold"></TextBlock>
+                    </StackPanel>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+
+        <!--Fais le lien avec PopUpUC-->
+        <local:PopUpUC x:Name="PopUpUC" HorizontalAlignment="Center" VerticalAlignment="Center" Visibility="Collapsed"/>
+        <!--Visibility="Collapsed"-->
+    </Grid>
+
+</UserControl>
